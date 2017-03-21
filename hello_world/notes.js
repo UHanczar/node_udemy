@@ -55,6 +55,11 @@ const removeTitle = (title) => {
   return notes.length !== filteredNotes.length;
 };
 
+const removeAll = () => {
+  const notes = [];
+  fs.writeFileSync('notes-data.json', JSON.stringify(notes));
+};
+
 const logNote = (note) => {
   console.log('--');
   console.log(`Title: ${note.title}`);
@@ -66,5 +71,6 @@ module.exports = {
   getAll,
   getNote,
   removeTitle,
-  logNote
+  logNote,
+  removeAll
 };

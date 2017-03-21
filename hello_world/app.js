@@ -5,7 +5,33 @@ const yargs = require('yargs');
 const notes = require('./notes');
 
 // here yargs stotes args, that we run in array
-const argv = yargs.argv;
+
+const commandRequirements = {
+  title: {
+    describe: 'Title of note',
+    demand: true,
+    alias: 't'
+  },
+  body: {
+    describe: 'Body of note',
+    demand: true,
+    alias: 'b'
+  }
+};
+const argv = yargs
+.command('add', 'Add a new note', {
+  title: commandRequirements.title,
+  body: commandRequirements.body
+})
+.command('list', 'List of notes')
+.command('read', 'Read a note', {
+  title: commandRequirements.title
+})
+.command('remove', 'Removes a note', {
+  title: commandRequirements.title
+})
+.help()
+.argv;
 const command = argv._[0];
 console.log('Commnad: ', command);
 // console.log('Process: ', process.argv);
@@ -41,6 +67,11 @@ if (command === 'add') {
   const noteRemoved = notes.removeTitle(argv.title);
   const message = noteRemoved ? 'The note was removed.' : 'The note was not found.';
   console.log(message);
-} else {
+} else if (command === 'removeAll') {
+  console.log('Removing all notes');
+  const emptyList = notes.removeAll();
+  console.log(emptyList);
+}
+else {
   console.log('Command not recognized');
 }
