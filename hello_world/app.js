@@ -71,7 +71,6 @@ if (command === 'add') {
   console.log('Removing all notes');
   const emptyList = notes.removeAll();
   console.log(emptyList);
-}
-else {
+} else {
   console.log('Command not recognized');
 }

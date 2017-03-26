@@ -9,3 +9,13 @@ process.argv // global object in node with deals with processes - argv - argumen
 --save // we need it, because without it package doesn't install to pacakge.json
 
 node app.js add --title=secret --body="This is my secret."
+
+--for debugging
+/////
+node debug app.js
+////
+node inspect app.js
+
+--then options: n (or next) // c (or continue to the end of program) // repl (or node console)
+
+--request module helps to get queries

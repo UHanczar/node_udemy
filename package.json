@@ -1,0 +1,31 @@
+{
+  "name": "nodejs_udemy",
+  "version": "1.0.0",
+  "description": "node.js udemy course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "U. Hanchar",
+  "license": "ISC",
+  "scripts": {
+    "start": "node wether_app/app.js"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "request": "^2.81.0",
+    "yargs": "^7.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-eslint": "^7.2.0",
+    "babel-preset-env": "^1.2.2",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-config-nodejs": "^1.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3"
+  }
+}
