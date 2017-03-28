@@ -19,3 +19,8 @@ node inspect app.js
 --then options: n (or next) // c (or continue to the end of program) // repl (or node console)
 
 --request module helps to get queries
+
+node wether_app\app.js --address "1602 lombard street philadephya"
+
+-- encodeURIComponent - helps to retch data from string to url
+--decodeURIComponent -makes oppiset
