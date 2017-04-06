@@ -4,14 +4,13 @@
   "description": "node.js udemy course",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node wether_app/app.js"
   },
   "author": "U. Hanchar",
   "license": "ISC",
-  "scripts": {
-    "start": "node wether_app/app.js"
-  },
   "dependencies": {
+    "axios": "^0.16.0",
+    "express": "^4.15.2",
     "lodash": "^4.17.4",
     "request": "^2.81.0",
     "yargs": "^7.0.2"
