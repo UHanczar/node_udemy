@@ -24,3 +24,6 @@ node wether_app\app.js --address "1602 lombard street philadephya"
 
 -- encodeURIComponent - helps to retch data from string to url
 --decodeURIComponent -makes oppiset
+
+--to run server under the nodemon we use
+nodemon server.js -e js,hbs
