@@ -4,7 +4,7 @@
   "description": "node.js udemy course",
   "main": "index.js",
   "scripts": {
-    "start": "node wether_app/app.js"
+    "start": "node 03.express_app/server.js"
   },
   "author": "U. Hanchar",
   "license": "ISC",
