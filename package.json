@@ -1,0 +1,17 @@
+{
+  "name": "nodejs_testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha **/utils.test.js",
+    "test-watch": "nodemon --exec \"npm test\""
+  },
+  "author": "U. Hanchar",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "expect": "^1.20.2",
+    "mocha": "^3.2.0"
+  }
+}
