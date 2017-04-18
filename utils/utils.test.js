@@ -19,3 +19,30 @@ it('it should square the number', () => {
 
   expect(res).toBe(25).toBeA('number');
 });
+
+it('should expect some values', () => {
+  expect(12).toNotBe(11);
+  // for objects or arrays use toEqual or toNotEqual or toInclude / toExclude or toNotInclude
+  expect({ name: 'Uladzimir' }).toEqual({ name: 'Uladzimir' });
+
+  expect([2, 3, 4]).toInclude(4);
+
+  expect({
+    name: 'Uladzimir',
+    age: 32,
+    location: 'Homiel'
+  }).toInclude({
+    name: 'Uladzimir'
+  });
+});
+
+it('should verify firstName and lastName', () => {
+  const person = utils.setName({}, 'Uladzimir Hanchar');
+
+  expect(person).toInclude({
+    firstName: 'Uladzimir',
+    lastName: 'Hanchar'
+  });
+
+  expect(person.firstName).toBe('Uladzimir').toBeA('string');
+});
