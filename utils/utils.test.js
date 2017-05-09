@@ -36,6 +36,20 @@ it('should expect some values', () => {
   });
 });
 
+it('should asynd add two numbers', (done) => {
+  utils.asyncAdd(4, 3, (sum) => {
+    expect(sum).toBe(7).toBeA('number');
+    done();
+  });
+});
+
+it('should async square a number', (done) => {
+  utils.asyncSquare(3, (res) => {
+    expect(res).toBe(9).toBeA('number');
+    done();
+  });
+});
+
 it('should verify firstName and lastName', () => {
   const person = utils.setName({}, 'Uladzimir Hanchar');
 
